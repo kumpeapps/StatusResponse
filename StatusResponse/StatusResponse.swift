@@ -17,7 +17,5 @@ public class StatusResponse {
     public func setDefaultErrorMessage(_ message: String?) {
         StatusResponse.errorMessages[0] = message
     }
-    public func HTTP_Status(_ statusCode: Int) -> HTTP_Status {
-        return HTTP_Status(statusCode)
-    }
+
 }
