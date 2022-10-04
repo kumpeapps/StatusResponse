@@ -9,7 +9,7 @@ import XCTest
 @testable import StatusResponse
 
 final class StatusResponseTests: XCTestCase {
-    
+
     let ok = 200
     let created = 201
     let forbidden = 403
