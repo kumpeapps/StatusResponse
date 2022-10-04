@@ -51,3 +51,30 @@ let description = status.statusDescription // Internal Server Error
 let success = status.isSuccess // False
 ```
 
+If you have custom error messages you wish to log or display to the user you can set errorMessages. By default, the default error message is the status description.
+
+```swift
+let errorMessages = [401: "Your username/password are incorrect", 423: "Your account is locked"]
+StatusResponse.setErrorMessages(errorMessages)
+
+let status = HTTP_Status(401)
+let error = status.errorMessage // Your username/password are incorrect
+
+let status2 = HTTP_Status(500)
+let error2 = status.errorMessage // Internal Server Error
+```
+
+You can change the default error message by setting StatusResponse.setDefaultErrorMessage().
+
+```swift
+let errorMessages = [401: "Your username/password are incorrect", 423: "Your account is locked"]
+StatusResponse.setErrorMessages(errorMessages)
+StatusResponse.setDefaultErrorMessage("An Unknown Error Occurred")
+
+let status = HTTP_Status(401)
+let error = status.errorMessage // Your username/password are incorrect
+
+let status2 = HTTP_Status(500)
+let error2 = status.errorMessage // An Unknown Error Occurred
+```
+
