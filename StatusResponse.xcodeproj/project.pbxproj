@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F77CC2728EB76F100B5D896 /* StatusResponse.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0F77CC2628EB76F100B5D896 /* StatusResponse.docc */; };
 		0F77CC2D28EB76F100B5D896 /* StatusResponse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F77CC2228EB76F100B5D896 /* StatusResponse.framework */; };
 		0F77CC3228EB76F100B5D896 /* StatusResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F77CC3128EB76F100B5D896 /* StatusResponseTests.swift */; };
-		0F77CC3328EB76F100B5D896 /* StatusResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F77CC2528EB76F100B5D896 /* StatusResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F77CC3D28EB77AE00B5D896 /* HTTP_Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F77CC3C28EB77AE00B5D896 /* HTTP_Status.swift */; };
+		0F77CC3F28EB785100B5D896 /* StatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F77CC3E28EB785100B5D896 /* StatusResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,10 +25,10 @@
 
 /* Begin PBXFileReference section */
 		0F77CC2228EB76F100B5D896 /* StatusResponse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StatusResponse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F77CC2528EB76F100B5D896 /* StatusResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusResponse.h; sourceTree = "<group>"; };
-		0F77CC2628EB76F100B5D896 /* StatusResponse.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = StatusResponse.docc; sourceTree = "<group>"; };
 		0F77CC2C28EB76F100B5D896 /* StatusResponseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StatusResponseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F77CC3128EB76F100B5D896 /* StatusResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusResponseTests.swift; sourceTree = "<group>"; };
+		0F77CC3C28EB77AE00B5D896 /* HTTP_Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP_Status.swift; sourceTree = "<group>"; };
+		0F77CC3E28EB785100B5D896 /* StatusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +71,8 @@
 		0F77CC2428EB76F100B5D896 /* StatusResponse */ = {
 			isa = PBXGroup;
 			children = (
-				0F77CC2528EB76F100B5D896 /* StatusResponse.h */,
-				0F77CC2628EB76F100B5D896 /* StatusResponse.docc */,
+				0F77CC3C28EB77AE00B5D896 /* HTTP_Status.swift */,
+				0F77CC3E28EB785100B5D896 /* StatusResponse.swift */,
 			);
 			path = StatusResponse;
 			sourceTree = "<group>";
@@ -92,7 +92,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F77CC3328EB76F100B5D896 /* StatusResponse.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +146,7 @@
 				TargetAttributes = {
 					0F77CC2128EB76F100B5D896 = {
 						CreatedOnToolsVersion = 14.0.1;
+						LastSwiftMigration = 1400;
 					};
 					0F77CC2B28EB76F100B5D896 = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -194,7 +194,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F77CC2728EB76F100B5D896 /* StatusResponse.docc in Sources */,
+				0F77CC3F28EB785100B5D896 /* StatusResponse.swift in Sources */,
+				0F77CC3D28EB77AE00B5D896 /* HTTP_Status.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +341,7 @@
 		0F77CC3728EB76F100B5D896 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -360,6 +362,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -368,6 +371,7 @@
 		0F77CC3828EB76F100B5D896 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -396,6 +400,7 @@
 		0F77CC3A28EB76F100B5D896 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2T42Z3DM34;
@@ -412,6 +417,7 @@
 		0F77CC3B28EB76F100B5D896 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2T42Z3DM34;
