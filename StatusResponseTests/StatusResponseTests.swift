@@ -23,33 +23,33 @@ final class StatusResponseTests: XCTestCase {
     }
 
     func testSuccess() throws {
-        XCTAssertTrue(HTTP_Status(ok).statusCategory == .Success)
-        XCTAssertTrue(HTTP_Status(ok).isSuccess)
-        XCTAssertTrue(HTTP_Status(created).isSuccess)
-        XCTAssertFalse(HTTP_Status(forbidden).isSuccess)
-        XCTAssertFalse(HTTP_Status(methodNotAllowed).isSuccess)
-        XCTAssertFalse(HTTP_Status(internalServerError).isSuccess)
-        XCTAssertEqual(HTTP_Status(ok).statusDescription, "OK")
-        XCTAssertEqual(HTTP_Status(created).statusDescription, "Created")
+        XCTAssertTrue(HTTPStatus(ok).statusCategory == .success)
+        XCTAssertTrue(HTTPStatus(ok).isSuccess)
+        XCTAssertTrue(HTTPStatus(created).isSuccess)
+        XCTAssertFalse(HTTPStatus(forbidden).isSuccess)
+        XCTAssertFalse(HTTPStatus(methodNotAllowed).isSuccess)
+        XCTAssertFalse(HTTPStatus(internalServerError).isSuccess)
+        XCTAssertEqual(HTTPStatus(ok).statusDescription, "OK")
+        XCTAssertEqual(HTTPStatus(created).statusDescription, "Created")
     }
 
     func testClientError() throws {
-        XCTAssertFalse(HTTP_Status(ok).statusCategory == .ClientError)
-        XCTAssertFalse(HTTP_Status(created).statusCategory == .ClientError)
-        XCTAssertTrue(HTTP_Status(forbidden).statusCategory == .ClientError)
-        XCTAssertTrue(HTTP_Status(methodNotAllowed).statusCategory == .ClientError)
-        XCTAssertFalse(HTTP_Status(internalServerError).statusCategory == .ClientError)
-        XCTAssertEqual(HTTP_Status(forbidden).statusDescription, "Forbidden")
-        XCTAssertEqual(HTTP_Status(methodNotAllowed).statusDescription, "Method Not Allowed")
+        XCTAssertFalse(HTTPStatus(ok).statusCategory == .clientError)
+        XCTAssertFalse(HTTPStatus(created).statusCategory == .clientError)
+        XCTAssertTrue(HTTPStatus(forbidden).statusCategory == .clientError)
+        XCTAssertTrue(HTTPStatus(methodNotAllowed).statusCategory == .clientError)
+        XCTAssertFalse(HTTPStatus(internalServerError).statusCategory == .clientError)
+        XCTAssertEqual(HTTPStatus(forbidden).statusDescription, "Forbidden")
+        XCTAssertEqual(HTTPStatus(methodNotAllowed).statusDescription, "Method Not Allowed")
     }
 
     func testServerError() throws {
-        XCTAssertFalse(HTTP_Status(ok).statusCategory == .ServerError)
-        XCTAssertFalse(HTTP_Status(created).statusCategory == .ServerError)
-        XCTAssertFalse(HTTP_Status(forbidden).statusCategory == .ServerError)
-        XCTAssertFalse(HTTP_Status(methodNotAllowed).statusCategory == .ServerError)
-        XCTAssertTrue(HTTP_Status(internalServerError).statusCategory == .ServerError)
-        XCTAssertEqual(HTTP_Status(internalServerError).statusDescription, "Internal Server Error")
+        XCTAssertFalse(HTTPStatus(ok).statusCategory == .serverError)
+        XCTAssertFalse(HTTPStatus(created).statusCategory == .serverError)
+        XCTAssertFalse(HTTPStatus(forbidden).statusCategory == .serverError)
+        XCTAssertFalse(HTTPStatus(methodNotAllowed).statusCategory == .serverError)
+        XCTAssertTrue(HTTPStatus(internalServerError).statusCategory == .serverError)
+        XCTAssertEqual(HTTPStatus(internalServerError).statusDescription, "Internal Server Error")
     }
 
 }

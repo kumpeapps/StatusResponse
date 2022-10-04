@@ -7,30 +7,30 @@
 
 import UIKit
 
-public struct HTTP_Status {
+public struct HTTPStatus {
     public let statusCode: Int
     public var isSuccess: Bool {
         switch statusCategory {
-        case .Success:
+        case .success:
             return true
         default:
             return false
         }
     }
-    public var statusCategory: HTTP_Status_Category {
+    public var statusCategory: HTTPStatusCategory {
         switch statusCode {
         case 100...199:
-            return .Informational
+            return .informational
         case 200...299:
-            return .Success
+            return .success
         case 300...399:
-            return .Redirection
+            return .redirection
         case 400...499:
-            return .ClientError
+            return .clientError
         case 500...599:
-            return .ServerError
+            return .serverError
         default:
-            return .Unknown
+            return .unknown
         }
     }
     public var statusDescription: String {
@@ -193,11 +193,11 @@ public struct HTTP_Status {
     }
 }
 
-public enum HTTP_Status_Category:String {
-    case Informational
-    case Success
-    case Redirection
-    case ClientError
-    case ServerError
-    case Unknown
+public enum HTTPStatusCategory:String {
+    case informational
+    case success
+    case redirection
+    case clientError
+    case serverError
+    case unknown
 }
