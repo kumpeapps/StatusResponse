@@ -1,5 +1,7 @@
 # StatusResponse
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2ae00cd002014afdafe971418097d92e)](https://app.codacy.com/gh/kumpeapps/StatusResponse?utm_source=github.com&utm_medium=referral&utm_content=kumpeapps/StatusResponse&utm_campaign=Badge_Grade_Settings)
+
 StatusResponse is a simple framework to assist in HTTP Status Response Codes.
 
 ## Installation with CocoaPods
