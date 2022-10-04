@@ -1,47 +1,160 @@
-Pod::Spec.new do |s|
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
-# 1
-s.platform = :ios
-s.ios.deployment_target = '15.0'
-s.name = "KumpeHelpers"
-s.summary = "Swift Helper Files used in KumpeApps."
-#s.requires_arc = true
+## User settings
+xcuserdata/
 
-# 2
-s.version          = ENV['LIB_VERSION'] || '4.5' #fallback to major version
+## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
+*.xcscmblueprint
+*.xccheckout
 
-# 3
-s.license = { :type => "MIT", :file => "LICENSE"}
+## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
+build/
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
 
-# 4 - Replace with your name and e-mail address
-s.author = { "Justin Kumpe" => "helpdesk@kumpeapps.com" }
-# 5 - Replace this URL with your own GitHub page's URL (from the address bar)
-s.homepage = "https://github.com/kumpeapps/KumpeHelpers.git"
+## Obj-C/Swift specific
+*.hmap
 
-# 6 - Replace this URL with your own Git URL from "Quick Setup"
-s.source = { :git => 'https://github.com/kumpeapps/KumpeHelpers.git', :tag => "#{s.version}" }
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
 
-# 7
-s.framework = "UIKit"
-s.dependency 'ReachabilitySwift'
-s.dependency 'SwiftMessages'
-s.dependency 'Alamofire-SwiftyJSON'
-s.dependency 'Sync'
-s.dependency 'CollectionViewCenteredFlowLayout'
-s.dependency 'Haptico'
-s.dependency 'DeviceKit'
-s.dependency 'FetchedResultsControllerCollectionViewUpdater'
-s.dependency 'Kingfisher'
-s.dependency 'BadgeSwift'
-s.dependency 'iCloudSync'
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
 
-# 8
-s.source_files = "KumpeHelpers/**/*.{swift,storyboard,xib,png}"
+# Swift Package Manager
+#
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# Packages/
+# Package.pins
+# Package.resolved
+# *.xcodeproj
+#
+# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
+# hence it is not needed unless you have added a package configuration file to your project
+# .swiftpm
 
-# 9
-#s.resources = "KumpeHelpers/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
+.build/
 
-# 10
-s.swift_version = "5"
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+#
+# Pods/
+#
+# Add this line if you want to avoid checking in source code from the Xcode workspace
+# *.xcworkspace
 
-end
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+
+Carthage/Build/
+
+# Accio dependency management
+Dependencies/
+.accio/
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo.
+# Instead, use fastlane to re-generate the screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/#source-control
+
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Code Injection
+#
+# After new code Injection tools there's a generated folder /iOSInjectionProject
+# https://github.com/johnno1962/injectionforxcode
+
+iOSInjectionProject/
+
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## User settings
+xcuserdata/
+
+## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
+*.xcscmblueprint
+*.xccheckout
+
+## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
+build/
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+## Gcc Patch
+/*.gcno
+
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+## CocoaPods GitIgnore Template
+
+# CocoaPods - Only use to conserve bandwidth / Save time on Pushing
+#           - Also handy if you have a large number of dependant pods
+#           - AS PER https://guides.cocoapods.org/using/using-cocoapods.html NEVER IGNORE THE LOCK FILE
+Pods/
+
+Packages
+.build/
+xcuserdata
+DerivedData/
+*.xcodeproj
+
+
+# End of https://mrkandreev.name/snippets/gitignore-generator/#Swift,Xcode,macOS,CocoaPods,SwiftPackageManager
