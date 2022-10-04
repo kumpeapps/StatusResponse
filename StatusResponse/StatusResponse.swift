@@ -8,8 +8,8 @@
 import Foundation
 
 public class StatusResponse {
-    static var errorMessages: [Int:String] = [:]
-    public func setErrorMessages(_ errorMessages: [Int:String]) {
+    static var errorMessages: [Int: String] = [:]
+    public func setErrorMessages(_ errorMessages: [Int: String]) {
         let defaultMessage = StatusResponse.errorMessages[0]
         StatusResponse.errorMessages = errorMessages
         StatusResponse.errorMessages[0] = defaultMessage
