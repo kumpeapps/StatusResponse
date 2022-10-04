@@ -188,12 +188,12 @@ public struct HTTPStatus {
     public var errorMessage: String {
         return StatusResponse.errorMessages[statusCode] ?? StatusResponse.errorMessages[0] ?? statusDescription
     }
-    public init(_ statusCode:Int) {
+    public init(_ statusCode: Int) {
         self.statusCode = statusCode
     }
 }
 
-public enum HTTPStatusCategory:String {
+public enum HTTPStatusCategory: String {
     case informational
     case success
     case redirection
